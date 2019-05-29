@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id='vue_det'>
+            <h1>site:{{site}}</h1>
+            <h1>url:{{url}}</h1>
+            <h1>Alexa:{{alexa}}</h1>
+        </div>
+        <script type='text/javascript'>
+            var data={site:'菜鸟教程',url:'www.runoob.com',alexa:1000};
+            var vue= new Vue({
+                el:'#vue_det',
+                data:data
+            })
+
+            document.write(vue.site==data.site);
+            document.write('<br>');
+            vue.site="Runoob";
+            document.write(data.site+'<br>');
+            data.alexa=1234;
+            document.write(data.alexa);
+
+        </script>
+    </body>
+</html>
